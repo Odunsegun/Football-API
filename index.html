@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+    <section class="home-page">
+        <div class="w-layout-blockcontainer container w-container">
+            <div class="home-box">
+                <div class="home-box-content">
+                    <div class="home-box-search">
+                        <h1>ENGLISH PREMIER LEAGUE</h1>
+                    </div>
+
+                    <div class="home-box-filter">
+                        <div class="season">
+                            <label for="season-select">Season</label>
+                            <select id="season-select">
+                                <option value="2024-25">2024–25</option>
+                                <option value="2023-24">2023–24</option>
+                                <option value="2022-23">2022–23</option>
+                            </select>
+                        </div>
+
+                        <div class="filter">
+                            <div class="Standing" id="standing">
+                                <h2>STANDINGS</h2>
+                            </div>
+    
+                            <div class="Match" id="match">
+                                    <h2>MATCHES</h2>
+                            </div>
+    
+                            <div class="Stat" id="stat">
+                                    <h2>STATS</h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="home-box-body">
+                        <div class="STANDINGS" style="display: none;">
+                            <div class="standing-content">
+                                <!-- Header Row -->
+                                <div class="stats-identifier">
+                                    <div class="stats-identifier-left">
+                                        <h3>Club</h3>
+                                    </div>
+                                    <div class="stats-identifier-right">
+                                        <h3>MP</h3>
+                                        <h3>W</h3>
+                                        <h3>D</h3>
+                                        <h3>L</h3>
+                                        <h3>GF</h3>
+                                        <h3>GA</h3>
+                                        <h3>GD</h3>
+                                        <h3>Pts</h3>
+                                        <h3>Last 5</h3>
+                                    </div>
+                                </div>
+                    
+                                <!-- Team Row -->
+                                <div class="teamsheet first">
+                                    <div class="team-number" id="team_number">
+                                        <h3>1</h3>
+                                    </div>
+                                    <div class="team-logo" id="team-logo">
+                                        <img src="" alt="Liverpool Logo">
+                                    </div>
+                                    <div class="team-name" id="team_name">
+                                        <h3>Liverpool</h3>
+                                    </div>
+                    
+                                    <div class="team-matches" id="team_matches">
+                                        <h3>7</h3>
+                                    </div>
+                                    <div class="team-wins" id="team_wins">
+                                        <h3>6</h3>
+                                    </div>
+                                    <div class="team-draws" id="team_draws">
+                                        <h3>0</h3>
+                                    </div>
+                                    <div class="team-losses" id="team_losses">
+                                        <h3>1</h3>
+                                    </div>
+                                    <div class="team-goalFor" id="team_goalFor">
+                                        <h3>13</h3>
+                                    </div>
+                                    <div class="team-goalAgainst" id="team_goalAgainst">
+                                        <h3>2</h3>
+                                    </div>
+                                    <div class="team-goalDifference" id="team_goalDifference">
+                                        <h3>11</h3>
+                                    </div>
+                                    <div class="team-points" id="team_points">
+                                        <h3>18</h3>
+                                    </div>
+                                    <div class="team-form" id="team_form">
+                                        <span class="form-win"></span>
+                                        <span class="form-loss"></span>
+                                        <span class="form-win"></span>
+                                        <span class="form-draw"></span>
+                                        <span class="form-win"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+
+                        <div class="MATCHES"  style="display: none;">
+                            <div class="match-content">
+                                <!--<div class="match-identifier">
+                                    MATCHES
+                                </div>-->
+
+                                <div class="match-card">
+                                    <div class="match-card-content">
+                                        <div class="match-card-top">
+                                            <div class="live">
+                                            </div>
+                                        </div>
+                                        <div class="match-card-body">
+                                            <div class="first-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-2038338-1718701.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="home-logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="home-team" id="home_team">
+                                                    <h2>Chelsea</h2>
+                                                </div>   
+                                            </div>
+                                            <div class="home-goals" id="home_goals">
+                                                <h2>1</h2>
+                                            </div>
+                                            <div class="match-divider">
+                                                <div class="first-line">
+                                                </div>
+                                                <div class="match-date" id="match_date">
+                                                    <div>3:00PM</div>
+                                                </div>
+                                                <div class="match-conclusion" id="match_conclusion">
+                                                    <h2>FT</h2>
+                                                </div>
+                                                <div class="second-line">
+                                                </div>
+                                            </div>
+                                            <div class="away-goals" id="away_goals">
+                                                <h2>1</h2>
+                                            </div>
+
+                                            <div class="second-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-2038338-1718701.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="away-logo" id="away_logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="away-team" id="away_team">
+                                                    <h2>Liverpool</h2>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="match-card">
+                                    <div class="match-card-content">
+                                        <div class="match-card-top">
+                                            <div class="live">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="match-card-body">
+                                            <div class="first-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-2038338-1718701.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="home-logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="home-team" id="home_team">
+                                                    <h3>Chelsea</h3>
+                                                </div>
+                                                <div class="home-goals" id="home_goals">
+                                                    <h1>2</h1>
+                                                </div>
+                                            </div>
+
+                                            <div class="match-divider">
+                                                <div class="first-line">
+
+                                                </div>
+
+                                                <div class="match-date" id="match_date">
+                                                    <div>3:00PM</div>
+                                                </div>
+
+                                                <div class="match-conclusion" id="match_conclusion">
+                                                    <h2>FT</h2>
+                                                </div>
+
+                                                <div class="second-line">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="second-team">
+                                                <div class="crown">
+                                                    
+                                                </div>
+                                                <div class="away-logo" >
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="away-team" id="away_team">
+                                                    <h3>Liverpool</h3>
+                                                </div>
+                                                <div class="away-goals" id="away_goals">
+                                                    <h2>1</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="match-card">
+                                    <div class="match-card-content">
+                                        <div class="match-card-top">
+                                            <div class="live">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="match-card-body">
+                                            <div class="first-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-2038338-1718701.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="home-logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="home-team">
+                                                    <h3>Chelsea</h3>
+                                                </div>
+                                                <div class="home-goals">
+                                                    <h1>2</h1>
+                                                </div>
+                                            </div>
+
+                                            <div class="match-divider">
+                                                <div class="first-line">
+
+                                                </div>
+
+                                                <div class="match-date">
+                                                    <div>3:00PM</div>
+                                                </div>
+
+                                                <div class="match-conclusion">
+                                                    <h2>FT</h2>
+                                                </div>
+
+                                                <div class="second-line">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="second-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-3219432-2679576.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="away-logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="away-team">
+                                                    <h3>Liverpool</h3>
+                                                </div>
+                                                <div class="away-goals">
+                                                    <h2>1</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+
+                                <div class="match-card">
+                                    <div class="match-card-content">
+                                        <div class="match-card-top">
+                                            <div class="live">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="match-card-body">
+                                            <div class="first-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-2038338-1718701.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="home-logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="home-team">
+                                                    <h3>Chelsea</h3>
+                                                </div>
+                                                <div class="home-goals">
+                                                    <h1>2</h1>
+                                                </div>
+                                            </div>
+
+                                            <div class="match-divider">
+                                                <div class="first-line">
+
+                                                </div>
+
+                                                <div class="match-date">
+                                                    <div>3:00PM</div>
+                                                </div>
+
+                                                <div class="match-conclusion">
+                                                    <h2>FT</h2>
+                                                </div>
+
+                                                <div class="second-line">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="second-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-3219432-2679576.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="away-logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="away-team">
+                                                    <h3>Liverpool</h3>
+                                                </div>
+                                                <div class="away-goals">
+                                                    <h2>1</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+
+                                <div class="match-card">
+                                    <div class="match-card-content">
+                                        <div class="match-card-top">
+                                            <div class="live">
+
+                                            </div>
+                                        </div>
+
+                                        <div class="match-card-body">
+                                            <div class="first-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-2038338-1718701.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="home-logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="home-team">
+                                                    <h3>Chelsea</h3>
+                                                </div>
+                                                <div class="home-goals">
+                                                    <h1>2</h1>
+                                                </div>
+                                            </div>
+
+                                            <div class="match-divider">
+                                                <div class="first-line">
+
+                                                </div>
+
+                                                <div class="match-date">
+                                                    <div>3:00PM</div>
+                                                </div>
+
+                                                <div class="match-conclusion">
+                                                    <h2>FT</h2>
+                                                </div>
+
+                                                <div class="second-line">
+
+                                                </div>
+                                            </div>
+
+                                            <div class="second-team">
+                                                <div class="crown">
+                                                    <img src="https://cdn.iconscout.com/icon/premium/png-512-thumb/crown-3219432-2679576.png?f=webp&w=256" alt="crown">
+                                                </div>
+                                                <div class="away-logo">
+                                                    <img src="" alt="Chelsea Logo">
+                                                </div>
+                                                <div class="away-team">
+                                                    <h3>Liverpool</h3>
+                                                </div>
+                                                <div class="away-goals">
+                                                    <h2>1</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+
+                        </div>
+
+                        <div class="STATS">
+                            <div class="stats-content">
+                                <div class="stats-title">
+                                    <h1>Premier League Leaders</h1>
+                                </div>
+                                <div class="stats-body">
+                                    <div class="goals">
+                                        <div class="stats-card goals">
+                                            <div class="stats-card-caption goals">
+                                                Goals
+                                            </div>
+                                            <div class="stats-card-body">
+                                                    <!-- Card Content (Image and Name) -->
+                                               
+                                                <!-- Player List -->
+                                                <div class="player-list">
+                                                    <div class="player-item">
+                                                        <div class="player-info">
+                                                            <span class="goal-rank">01</span> 
+                                                            <figure class="goals-player-image">
+                                                                <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                            </figure>
+                                                            <div class="goal-position" style="display: none;">
+                                                                <h1>ST</h1>
+                                                            </div>
+                                                            <div class="goals-name-club">
+                                                                <span class="goal-name">Erling Haaland</span>
+                                                                <div class="goal-club">
+                                                                    <figure class="goal-club-logo"> <img src="sed.jpg" alt=""></figure>
+                                                                    <span class="goal-club-name">Man City</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="Goals-scored">4</span>
+                                                        </div> 
+                                                        <div class="dropdown-stats" style="display: none;">
+                                                            <div class="left-extra-stats">
+                                                                <figure class="extra-stats-image">
+                                                                    <div class="flag-container">
+                                                                        <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                        <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                    </div>
+                                                                </figure>
+                                                                <div class="assists-goals">
+                                                                    <span>
+                                                                        <h3>Assists : 5</h3>
+                                                                    </span>    
+                                                                </div>
+                                                            </div>
+                                                
+                                                            <div class="club-extra-stats">
+                                                                <h1>Man City</h1>
+                                                            </div>
+
+                                                            <div class="goal-extra-stats">
+                                                                <div class="minutes-per-goal">
+                                                                    <h3>GPM: 101"</h3>
+                                                                </div>
+                                                                <div class="shot-accuracy">
+                                                                    <h3>SA% : 50%</h3>
+                                                                </div>
+                                                                <div class="goals-per-shot">
+                                                                    <h3>SPG: 20</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>                                   
+                                                    </div>
+
+                                                    <div class="player-item">
+                                                        <div class="player-info">
+                                                            <span class="goal-rank">01</span>
+                                                            <figure class="goals-player-image">
+                                                                <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                            </figure>
+                                                            <div class="goals-name-club">
+                                                                <span class="goal-name">Erling Haaland</span>
+                                                                <div class="goal-club">
+                                                                    <figure class="goal-club-logo"> <img src="sed.jpg" alt=""></figure>
+                                                                    <span class="goal-club-name">Man City</span>
+                                                                </div>
+                                                            </div>
+                                                            <span class="Goals-scored">4</span>
+                                                        </div>
+                                                        <!-- Dropdown content that is initially hidden -->
+                                                        <div class="dropdown-stats" style="display: none;">
+                                                            <div class="left-extra-stats">
+                                                                <figure class="extra-stats-image">
+                                                                    <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                    <img src="sed.jpg" alt="Player Image" class="">
+                                                                </figure>
+                                                                <div class="assists-goals">
+                                                                    <span>
+                                                                        <h3>Assists : 5</h3>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="club-extra-stats">
+                                                                <h1>Man City</h1>
+                                                            </div>
+                                                            <div class="goal-extra-stats">
+                                                                <div class="minutes-per-goal">
+                                                                    <h3>GPM: 101</h3>
+                                                                </div>
+                                                                <div class="shot-accuracy">
+                                                                    <h3>SA% : 50%</h3>
+                                                                </div>
+                                                                <div class="goals-per-shot">
+                                                                    <h3>SPG: 20</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+    
+                                    <div class="assists">
+                                        <div class="stats-card assists">
+                                            <div class="stats-card-caption assists">
+                                                Assists
+                                            </div>
+                                            <div class="stats-card-body">
+                                                <!-- Card Content (Image and Name) -->
+                                           
+                                            <!-- Player List -->
+                                            <div class="player-list-assist">
+                                                <div class="player-item">
+                                                    <div class="player-info">
+                                                        <span class="goal-rank">01</span> 
+                                                        <figure class="goals-player-image">
+                                                            <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                        </figure>
+                                                        <div class="assist-position" style="display: none;">
+                                                            <h1>ST</h1>
+                                                        </div>
+                                                        <div class="goals-name-club">
+                                                            <span class="goal-name">Erling Haaland</span>
+                                                            <div class="goal-club">
+                                                                <figure class="goal-club-logo"> <img src="sed.jpg" alt=""></figure>
+                                                                <span class="goal-club-name">Man City</span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="Goals-scored">4</span>
+                                                    </div> 
+                                                    <div class="dropdown-stats" style="display: none;">
+                                                        <div class="left-extra-stats">
+                                                            <figure class="extra-stats-image">
+                                                                <div class="flag-container">
+                                                                    <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                    <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                </div>
+                                                            </figure>
+                                                            <div class="advanced-stats-sidebar">
+                                                                <div class="sidebar-toggle">Advanced stats</div>
+                                                                <div class="goal-extra-stats">
+                                                                    <div class="minutes-per-goal">
+                                                                        <h3>GPM: 101</h3>
+                                                                    </div>
+                                                                    <div class="shot-accuracy">
+                                                                        <h3>SA% : 50%</h3>
+                                                                    </div>
+                                                                    <div class="goals-per-shot">
+                                                                        <h3>SPG: 20</h3>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <!--<div class="assists-goals">
+                                                                <span>
+                                                                    <h3>Assists : 5</h3>
+                                                                </span>    
+                                                            </div>-->
+                                                        </div>
+                                            
+                                                        <div class="club-extra-stats">
+                                                            <div class="club-in-stats">
+                                                                <h1>Man City</h1>
+                                                            </div>
+                                                        
+                                                            
+                                                        </div>
+
+                                                    </div>                                   
+                                                </div>
+
+                                                <div class="player-item">
+                                                    <div class="player-info">
+                                                        <span class="goal-rank">01</span> 
+                                                        <figure class="goals-player-image">
+                                                            <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                        </figure>
+                                                        <div class="assist-position" style="display: none;">
+                                                            <h1>ST</h1>
+                                                        </div>
+                                                        <div class="goals-name-club">
+                                                            <span class="goal-name">Erling Haaland</span>
+                                                            <div class="goal-club">
+                                                                <figure class="goal-club-logo">
+                                                                    <img src="sed.jpg" alt="Man City Logo">
+                                                                </figure>
+                                                                <span class="goal-club-name">Man City</span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="Goals-scored">4</span>
+                                                    </div> 
+                                                
+                                                    <!-- Dropdown Stats -->
+                                                    <div class="dropdown-stats" style="display: none;">
+                                                        
+                                                        <!-- Left Stats Section -->
+                                                        <div class="left-extra-stats">
+                                                            <figure class="extra-stats-image">
+                                                                <div class="flag-container">
+                                                                    <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                    <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                </div>
+                                                            </figure>
+                                                            <div class="assists-goals">
+                                                                <span>
+                                                                    <h3>Assists: 5</h3>
+                                                                </span>    
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <!-- Center Stats Section with Key Stats -->
+                                                        <div class="goal-extra-stats">
+                                                            <div class="minutes-per-goal">
+                                                                <h3>GPM: 101</h3>
+                                                            </div>
+                                                            <div class="shot-accuracy">
+                                                                <h3>SA%: 50%</h3>
+                                                            </div>
+                                                            <div class="goals-per-shot">
+                                                                <h3>SPG: 20</h3>
+                                                            </div>
+                                                        </div>
+                                                
+                                                        <!-- Extra Stats Section -->
+                                                        <div class="extra-stats">
+                                                            <div><img src="ball-icon.png" alt="Goals Icon"> Goals: 20</div>
+                                                            <div><img src="yellow-card-icon.png" alt="Yellow Card Icon"> Yellow Cards: 2</div>
+                                                            <div><img src="match-icon.png" alt="Matches Icon"> Matches Played: 18</div>
+                                                        </div>
+                                                
+                                                        <!-- Progress Bar Section for Performance Metrics -->
+                                                        <div class="progress-bar">
+                                                            <div class="progress goals" style="width: 80%;">Goals</div>
+                                                            <div class="progress assists" style="width: 60%;">Assists</div>
+                                                        </div>
+                                                
+                                                        <!-- Player Bio Section -->
+                                                        <div class="player-bio">
+                                                            <p>Erling Haaland has scored the most goals this season with an impressive accuracy rate. Known for his speed and strength, he's a key player for Man City.</p>
+                                                        </div>
+                                                
+                                                        <!-- Rotated Club Name Section -->
+                                                        <div class="club-extra-stats">
+                                                            <h1>Man City</h1>
+                                                        </div>
+                                                
+                                                        <!-- Social Media or Follow Buttons -->
+                                                        <div class="social-buttons">
+                                                            <button>Follow</button>
+                                                            <img src="twitter-icon.png" alt="Twitter">
+                                                            <img src="instagram-icon.png" alt="Instagram">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+
+                                                <div class="player-item-assist">
+                                                    <div class="player-info-assist">
+                                                        <span class="assist-rank">01</span>
+                                                        <figure class="assists-player-image">
+                                                            <img src="sed.jpg" alt="Player Image" class="player-assist-img">
+                                                        </figure>
+                                                        <div class="assist-position" style="display: none;">
+                                                            <h1>ST</h1>
+                                                        </div>
+                                                        <div class="assists-name-club">
+                                                            <span class="assist-name">Erling Haaland</span>
+                                                            <div class="assist-club">
+                                                                <figure class="assist-club-logo"> <img src="sed.jpg" alt=""></figure>
+                                                                <span class="assist-club-name">Man City</span>
+                                                            </div> 
+                                                        </div>
+                                                        <span class="Assists-made">4</span>
+                                                    </div>
+                                                    <!-- Dropdown content that is initially hidden -->
+                                                    <div class="dropdown-assists-stats" style="display: none;">
+                                                        <div class="left-extra-stats">
+                                                            <figure class="extra-stats-image">
+                                                                <div class="flag-container">
+                                                                    <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                    <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                </div>
+                                                            </figure>
+                                                            <div class="goals-assists">
+                                                                <span>
+                                                                    <h3>Assists : 5</h3>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="club-extra-stats">
+                                                            <h1>Man City</h1>
+                                                        </div>
+                                                        <div class="goal-extra-stats">
+                                                            <div class="minutes-per-assist">
+                                                                <h3>MPA: 101</h3>
+                                                            </div>
+                                                            <div class="Key-passes">
+                                                                <h3>KP : 50</h3>
+                                                            </div>
+                                                            <div class="succesful-dribbles">
+                                                                <h3>SD%: 50%"</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="player-item">
+                                                    <div class="player-info">
+                                                        <span class="rank">01</span>
+                                                        <figure class="player-image">
+                                                            <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                        </figure>
+                                                        <div class="position" style="display: none;">
+                                                            <h1>ST</h1>
+                                                        </div>
+                                                        <div class="name-club">
+                                                            <span class="player-name">Erling Haaland</span>
+                                                            <div class="club">
+                                                                <figure class="club-logo">
+                                                                    <img src="sed.jpg" alt="Man City Logo">
+                                                                </figure>
+                                                                <span class="club-name">Man City</span>
+                                                            </div>
+                                                        </div>
+                                                        <span class="main-stat">4</span>
+                                                    </div>
+                                                    
+                                                    <!-- Dropdown content that is initially hidden -->
+                                                    <div class="dropdown-stats" style="display: none;">
+                                                        <div class="left-extra-stats">
+                                                            <figure class="extra-stats-image">
+                                                                <div class="flag-container">
+                                                                    <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                    <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                </div>
+                                                            </figure>
+                                                            <div class="secondary-stat">
+                                                                <span>
+                                                                    <h3>Assists: 5</h3> <!-- Replace 'Assists' dynamically if needed -->
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="club-extra-stats">
+                                                            <h1>Man City</h1>
+                                                        </div>
+                                                        
+                                                        <div class="extra-stats">
+                                                            <div class="minutes-per-stat">
+                                                                <h3>MPA: 101</h3> <!-- 'MPA' can be dynamic for different stats -->
+                                                            </div>
+                                                            <div class="key-passes">
+                                                                <h3>KP: 50</h3>
+                                                            </div>
+                                                            <div class="successful-dribbles">
+                                                                <h3>SD%: 50%</h3>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="yellow-cards">
+                                        <div class="stats-card yellow">
+                                            <div class="stats-card-caption yellow">
+                                                Yellow Cards
+                                            </div>
+                                            <div class="stats-card-body">
+                                                <div class="player-list-yellow">
+                                                    <div class="player-item-yellow">
+                                                        <div class="player-info-yellow">
+                                                            <span class="yellow-rank">01</span>
+                                                            <figure class="yellows-player-image">
+                                                                <img src="sed.jpg" alt="Player Image" class="player-yellow-img">
+                                                            </figure>
+                                                            <div class="yellow-position" style="display: none;">
+                                                                <h1>ST</h1>
+                                                            </div>
+                                                            <div class="yellows-name-club">
+                                                                <span class="yellow-name">Erling Haaland</span>
+                                                                <div class="yellow-club">
+                                                                    <figure class="yellow-club-logo"> <img src="sed.jpg" alt=""></figure>
+                                                                    <span class="yellow-club-name">Man City</span>
+                                                                </div> 
+                                                            </div>
+                                                            <span class="Yellows-committed">4</span>
+                                                        </div>
+                                                        <!-- Dropdown content that is initially hidden -->
+                                                        <div class="dropdown-yellows-stats" style="display: none;">
+                                                            <div class="left-extra-stats">
+                                                                <figure class="extra-stats-image">
+                                                                    <div class="flag-container">
+                                                                        <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                        <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                    </div>
+                                                                </figure>
+                                                                <div class="Second-yellow">
+                                                                    <span>
+                                                                        <h3>Second Yellow: 6</h3>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="club-extra-stats">
+                                                                <h1>Man City</h1>
+                                                            </div>
+                                                            <div class="goal-extra-stats">
+                                                                <div class="tackles">
+                                                                    <h3>T: 30</h3>
+                                                                </div>
+                                                                <div class="penalties-conceded">
+                                                                    <h3>PC: 5"</h3>
+                                                                </div>
+                                                                <div class="Duels-won">
+                                                                    <h3>KP : 50</h3>
+                                                                </div>
+                                                                
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="player-item-assist">
+                                                        <div class="player-info-assist">
+                                                            <span class="assist-rank">01</span>
+                                                            <figure class="assists-player-image">
+                                                                <img src="sed.jpg" alt="Player Image" class="player-assist-img">
+                                                            </figure>
+                                                            <div class="assist-position" style="display: none;">
+                                                                <h1>ST</h1>
+                                                            </div>
+                                                            <div class="assists-name-club">
+                                                                <span class="assist-name">Erling Haaland</span>
+                                                                <div class="assist-club">
+                                                                    <figure class="assist-club-logo"> <img src="sed.jpg" alt=""></figure>
+                                                                    <span class="assist-club-name">Man City</span>
+                                                                </div> 
+                                                            </div>
+                                                            <span class="Assists-made">4</span>
+                                                        </div>
+                                                        <!-- Dropdown content that is initially hidden -->
+                                                        <div class="dropdown-assists-stats" style="display: none;">
+                                                            <div class="left-extra-stats">
+                                                                <figure class="extra-stats-image">
+                                                                    <div class="flag-container">
+                                                                        <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                        <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                    </div>
+                                                                </figure>
+                                                                <div class="goals-assists">
+                                                                    <span>
+                                                                        <h3>Assists : 5</h3>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="club-extra-stats">
+                                                                <h1>Man City</h1>
+                                                            </div>
+                                                            <div class="goal-extra-stats">
+                                                                <div class="tackles">
+                                                                    <h3>T: 30</h3>
+                                                                </div>
+                                                                <div class="Duels-won">
+                                                                    <h3>KP : 50</h3>
+                                                                </div>
+                                                                <div class="penalties-conceded">
+                                                                    <h3>PC: 5"</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="red-cards">
+                                        <div class="stats-card red">
+                                            <div class="stats-card-caption red">
+                                                Red Cards
+                                            </div>
+                                            <div class="stats-card-body">
+                                                <div class="player-list-red">
+                                                    <div class="player-item-red">
+                                                        <div class="player-info-red">
+                                                            <span class="red-rank">01</span>
+                                                            <figure class="reds-player-image">
+                                                                <img src="sed.jpg" alt="Player Image" class="player-red-img">
+                                                            </figure>
+                                                            <div class="red-position" style="display: none;">
+                                                                <h1>ST</h1>
+                                                            </div>
+                                                            <div class="reds-name-club">
+                                                                <span class="red-name">Erling Haaland</span>
+                                                                <div class="red-club">
+                                                                    <figure class="red-club-logo"> <img src="sed.jpg" alt=""></figure>
+                                                                    <span class="red-club-name">Man City</span>
+                                                                </div> 
+                                                            </div>
+                                                            <span class="Reds-committed">4</span>
+                                                        </div>
+                                                        <!-- Dropdown content that is initially hidden -->
+                                                        <div class="dropdown-reds-stats" style="display: none;">
+                                                            <div class="left-extra-stats">
+                                                                <figure class="extra-stats-image">
+                                                                    <div class="flag-container">
+                                                                        <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                        <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                    </div>
+                                                                </figure>
+                                                                <div class="Games-missed">
+                                                                    <span>
+                                                                        <h3>GM : 5</h3>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="club-extra-stats">
+                                                                <h1>Man City</h1>
+                                                            </div>
+                                                            <div class="goal-extra-stats">
+                                                                <div class="tackles">
+                                                                    <h3>T: 30</h3>
+                                                                </div>
+                                                                <div class="penalties-conceded">
+                                                                    <h3>PC: 5"</h3>
+                                                                </div>
+                                                                <div class="Duels-success">
+                                                                    <h3>D-s : 50%</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="player-item-assist">
+                                                        <div class="player-info-assist">
+                                                            <span class="assist-rank">01</span>
+                                                            <figure class="assists-player-image">
+                                                                <img src="sed.jpg" alt="Player Image" class="player-assist-img">
+                                                            </figure>
+                                                            <div class="assist-position" style="display: none;">
+                                                                <h1>ST</h1>
+                                                            </div>
+                                                            <div class="assists-name-club">
+                                                                <span class="assist-name">Erling Haaland</span>
+                                                                <div class="assist-club">
+                                                                    <figure class="assist-club-logo"> <img src="sed.jpg" alt=""></figure>
+                                                                    <span class="assist-club-name">Man City</span>
+                                                                </div> 
+                                                            </div>
+                                                            <span class="Assists-made">4</span>
+                                                        </div>
+                                                        <!-- Dropdown content that is initially hidden -->
+                                                        <div class="dropdown-assists-stats" style="display: none;">
+                                                            <div class="left-extra-stats">
+                                                                <figure class="extra-stats-image">
+                                                                    <div class="flag-container">
+                                                                        <!--<div class="flag-overlay">
+                                                                        <h1>4</h1>
+                                                                    </div>-->
+                                                                        <img src="sed.jpg" alt="Player Image" class="player-img">
+                                                                    </div>
+                                                                </figure>
+                                                                <div class="goals-assists">
+                                                                    <span>
+                                                                        <h3>Assists : 5</h3>
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="club-extra-stats">
+                                                                <h1>Man City</h1>
+                                                            </div>
+                                                            <div class="goal-extra-stats">
+                                                                <div class="minutes-per-assist">
+                                                                    <h3>MPA: 101</h3>
+                                                                </div>
+                                                                <div class="Key-passes">
+                                                                    <h3>KP : 50</h3>
+                                                                </div>
+                                                                <div class="succesful-dribbles">
+                                                                    <h3>SD%: 50%"</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script type="module" src="epl.js"></script>
+    <script type="module" src="./standings.js"></script>
+</body>
+</html>
