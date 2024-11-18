@@ -572,12 +572,6 @@ body{
     color: #505050;
     transform: rotate(-90deg);
 }
-.club-in-stats h1{
-    color: #505050;
-    font-size: 48px;
-    flex-wrap: nowrap;
-    white-space: nowrap;  
-}
 .goal-extra-stats{
     display: flex;
     flex-direction: column;
@@ -684,7 +678,6 @@ body{
 .goal-club-name,
 .Goals-scored {
     font-size: 16px;
-    color: #ffffff;
     font-weight: 600;
 }
 
@@ -746,12 +739,14 @@ body{
 }
 
 .club-in-stats h1 {
-    font-size: 48px; /* Adjust font size as needed */
+    font-size: 32px; /* Adjust font size as needed */
     color: #505050;
     margin: 0;
     padding: 0;
     line-height: 1; /* Tighten line spacing */
     white-space: nowrap; /* Prevent text from wrapping */
+    flex-wrap: nowrap;
+ 
 }
 
 
