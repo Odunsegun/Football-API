@@ -3,7 +3,6 @@
 import { fetchData} from "./standings.js";
 import { fetchPlayerStats } from "./stats.js";
 import { fetchFixtures } from "./fixtures.js";
-import { showSection } from "./show-section.js";
 import { setupPlayerInfoClickListener, setupSidebarToggleClickListener } from "./toggleplayer.js"
  
 
@@ -17,7 +16,31 @@ const statsButton = document.getElementById('stat');
 // Select content sections
 const standingsContent = document.querySelector('.STANDINGS');
 const matchesContent = document.querySelector('.MATCHES');
-const statsContent = document.querySelector('.STATS');
+const statsContent = document.querySelector('.STATS');// Function to show the selected section and hide the others
+
+function showSection(section) {
+    // Hide all sections
+    standingsContent.style.display = 'none';
+    matchesContent.style.display = 'none';
+    statsContent.style.display = 'none';
+
+    // Remove active class from all buttons
+    standingsButton.classList.remove('active');
+    matchesButton.classList.remove('active');
+    statsButton.classList.remove('active');
+
+    // Show the selected section and set its button as active
+    if (section === 'standings') {
+        standingsContent.style.display = 'block';
+        standingsButton.classList.add('active');
+    } else if (section === 'matches') {
+        matchesContent.style.display = 'block';
+        matchesButton.classList.add('active');
+    } else if (section === 'stats') {
+        statsContent.style.display = 'block';
+        statsButton.classList.add('active');
+    }
+}
 
 // SHOW BUTTONS
 standingsButton.addEventListener('click', () => {
@@ -38,8 +61,8 @@ showSection('matches');
 //STANDINGS
 
 // Call fetchData initially with the default season (e.g., 2024)
-/*fetchData('2024');
-//*/
+fetchData('2024');
+//
 
 // Add an event listener to the season dropdown
 document.getElementById('season-select').addEventListener('change', function() {
@@ -50,22 +73,21 @@ document.getElementById('season-select').addEventListener('change', function() {
 
 
 //FIXTURES
-/*fetchFixtures();
-//*/
+fetchFixtures();
+
 
 //STATS
-// Initialize event listeners
 setupPlayerInfoClickListener();
 setupSidebarToggleClickListener();
 
 
 
-/*// Fetch data
+// Fetch data
 fetchPlayerStats('goals');
 fetchPlayerStats('assists');
 fetchPlayerStats('yellows');
 fetchPlayerStats('reds');
-*/
+
 
 
 

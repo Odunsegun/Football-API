@@ -147,7 +147,7 @@ export function createPlayerItem(rank, playerImage, position, playerName, clubLo
             <div class="left-extra-stats">
                 <figure class="extra-stats-image">
                     <div class="flag-container">
-                        <div class="flag-overlay"><h1>${mainStat}</h1></div>
+                        <div class="flag-overlay"><h1></h1></div>
                         <img src="${playerImage}" alt="Player Image" class="player-img">
                     </div>
                 </figure>
